@@ -50,50 +50,48 @@ const LandingView = () => {
   }, [languageName, pageTitle]);
 
   return (
-    <Layout title={pageTitle} description="This is the percentage calculator page">
-      <main>
-        <p>Note: Ensure your browser is not set to 'Auto translate'.</p>
-        <div className={`languages_box mt-5 ${languageName === "arabic" ? 'rtl_text' : ''}`}>
-          <h1>{pageTitle}</h1>
-          <p>{pageIntro}</p>
-          <ul>
-            {
-              Object.keys(languages).map((key) => (
-                <li key={key}>{languages[key].label}</li>
-              ))
-            }
-          </ul>
-          <p>
-            <span>{currentLanguage}:&nbsp;</span>
-            {
-              languageName
-              ? <span>[ {languageName} ]</span>
-              : <span>...</span>
-            }
-          </p>
-          <div className="language_box">
-            <p>{pageText}</p>
-          </div>
-
-          <div className="profile_buttons_container">
-            <button className="button submit_btn form_button" onClick={() => setToggleTechUsed(!toggleTechUsed)}>{techUsedText}</button>
-          </div>
-
+    <Layout title={pageTitle} description="This is the Language switch app">
+      <p>Note: Ensure your browser is not set to 'Auto translate'.</p>
+      <div className={`languages_box mt-5 ${languageName === "arabic" ? 'rtl_text' : ''}`}>
+        <h1>{pageTitle}</h1>
+        <p>{pageIntro}</p>
+        <ul>
           {
-            toggleTechUsed &&
-            <ul>
-              <li>react</li>
-              <li>react-hooks</li>
-              <li>react-use-context</li>
-              <li>javascript</li>
-              <li>scss</li>
-              <li>css3</li>
-              <li>html5</li>
-              <li>Local storage</li>
-            </ul>
+            Object.keys(languages).map((key) => (
+              <li key={key}>{languages[key].label}</li>
+            ))
           }
+        </ul>
+        <p>
+          <span>{currentLanguage}:&nbsp;</span>
+          {
+            languageName
+            ? <span>[ {languageName} ]</span>
+            : <span>...</span>
+          }
+        </p>
+        <div className="language_box">
+          <p>{pageText}</p>
         </div>
-      </main>
+
+        <div className="profile_buttons_container">
+          <button className="button submit_btn form_button" onClick={() => setToggleTechUsed(!toggleTechUsed)}>{techUsedText}</button>
+        </div>
+
+        {
+          toggleTechUsed &&
+          <ul>
+            <li>react</li>
+            <li>react-hooks</li>
+            <li>react-use-context</li>
+            <li>javascript</li>
+            <li>scss</li>
+            <li>css3</li>
+            <li>html5</li>
+            <li>Local storage</li>
+          </ul>
+        }
+      </div>
     </Layout>
   )
 }

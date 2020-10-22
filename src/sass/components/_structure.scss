@@ -14,9 +14,11 @@ html {
   #root {
     // background-image: url('https://firebasestorage.googleapis.com/v0/b/fir-auth-fbsite.appspot.com/o/images%2Fcontent%2FlayoutImages%2Fasael-pena-M7fcMgxVmxc-unsplash.jpg?alt=media&token=2dc45958-8e81-428f-8e3e-055a72a7429d');
     // background-size: cover;
-    display: grid;
+    // display: grid;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    // grid-template-rows: auto 1fr auto;
 
     @import './header';
     @import './footer';
@@ -54,7 +56,7 @@ html {
       main {
         color: white;
         margin-top: 110px;
-        padding: 0 30px;
+        padding: 30px 30px;
         position: relative;
 
         .languages_box {

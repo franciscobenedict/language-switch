@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Footer = () => {
+  const [date , setDate] = useState();
+  const getYear = () => setDate(new Date().getFullYear());
+
+  useEffect(() => {
+    getYear();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <footer className='footer'>
-        2020 &copy; Francisco Benedict: React Firebase Developer
-        <br />
-        Image credit: Photo by asael-pena from unsplash.com
+      &copy; {date} Francisco Benedict: React Firebase Developer
+      <br />
+      Image credit: Photo by asael-pena from unsplash.com
     </footer>
-   );
+  );
 }
 
 export default Footer;
