@@ -14,6 +14,7 @@ const LandingView = () => {
   const [currentLanguage, setCurrentLanguage] = useState('');
   const [pageText, setPageText] = useState('');
   const languages = languageNames[2];
+  const [toggleTechUsed, setToggleTechUsed] = useState(false);
 
   //Once components load complete
   useEffect(() => {
@@ -67,6 +68,23 @@ const LandingView = () => {
         <div className="language_box">
           <p>{pageText}</p>
         </div>
+
+        <div className="profile_buttons_container">
+          <button className="button submit_btn form_button" onClick={() => setToggleTechUsed(!toggleTechUsed)}>Technology used</button>
+        </div>
+
+        {
+          toggleTechUsed &&
+          <ul>
+            <li>react</li>
+            <li>react-hooks</li>
+            <li>react-use-context</li>
+            <li>javascript</li>
+            <li>scss</li>
+            <li>css3</li>
+            <li>html5</li>
+          </ul>
+        }
       </div>
     </main>
   )
