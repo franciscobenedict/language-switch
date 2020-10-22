@@ -1,0 +1,9 @@
+footer {
+  background: rgba(0,0,0,.6);
+  color: $light_grey;
+  flex-shrink: 0;
+  padding: 1rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}

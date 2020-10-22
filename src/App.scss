@@ -1,0 +1,24 @@
+@import './sass/main';
+
+.language_selector {
+  position: relative;
+  z-index: 101;
+  select {
+    padding: 10px;
+    position: absolute;
+    right: 30px;
+    top: 2rem;
+    width: 10rem;
+  }
+}
+
+.languages_box {
+  background: rgba(255,255,255,0.8);
+  color: $dark_grey;
+  margin: 40px auto;
+  padding: 20px;
+
+  &.rtl_text {
+    direction: rtl;
+  }
+}
