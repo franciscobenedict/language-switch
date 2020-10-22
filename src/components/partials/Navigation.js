@@ -1,5 +1,5 @@
 import React from 'react';
-import fbLogo from '../assets/fb-logo-white-header.svg';
+import fbLogo from '../../assets/fb-logo-white-header.svg';
 
 const Navigation = () => {
 

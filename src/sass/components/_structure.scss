@@ -12,41 +12,83 @@ html {
   }
 
   #root {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/fir-auth-fbsite.appspot.com/o/images%2Fcontent%2FlayoutImages%2Fasael-pena-M7fcMgxVmxc-unsplash.jpg?alt=media&token=2dc45958-8e81-428f-8e3e-055a72a7429d');
-    background-size: cover;
+    // background-image: url('https://firebasestorage.googleapis.com/v0/b/fir-auth-fbsite.appspot.com/o/images%2Fcontent%2FlayoutImages%2Fasael-pena-M7fcMgxVmxc-unsplash.jpg?alt=media&token=2dc45958-8e81-428f-8e3e-055a72a7429d');
+    // background-size: cover;
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr auto;
 
     @import './header';
+    @import './footer';
 
-    main {
-      color: white;
-      margin-top: 110px;
-      padding: 0 30px;
+    .language_selector {
       position: relative;
-
-      // HEADINGS
-      h1  { font-size: $heading1; }
-      h2  { font-size: $heading2; }
-      h3  { font-size: $heading3; }
-      h4  { font-size: $heading4; }
-      h5  { font-size: $heading5; }
-      p   { font-size: $normal_font_size }
-
-      @include respond-below(md) {
-        // HEADINGS
-        h1  { font-size: $heading1_s; }
-        h2  { font-size: $heading2_s; }
-        h3  { font-size: $heading3_s; }
-        h4  { font-size: $heading4_s; }
-        h5  { font-size: $heading5_s; }
-        p   { font-size: $medium_font_size }
-
-        padding-bottom: 0;
+      z-index: 101;
+      select {
+        padding: 10px;
+        position: fixed;
+        right: 30px;
+        top: 1rem;
+        width: 10rem;
       }
     }
 
-    @import './footer';
+    .content {
+      flex: 1 0 auto;
+
+      background-image: url('https://firebasestorage.googleapis.com/v0/b/fir-auth-fbsite.appspot.com/o/images%2Fcontent%2FlayoutImages%2Fasael-pena-M7fcMgxVmxc-unsplash.jpg?alt=media&token=2dc45958-8e81-428f-8e3e-055a72a7429d');
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      background-position:center;
+
+      .styles_header__3PFGX {
+        background: rgba(51, 51, 51, 0.4);
+      }
+
+      .styles_navLinks__38tON a {
+          letter-spacing: 1px;
+          padding: 10px 20px;
+      }
+
+      main {
+        color: white;
+        margin-top: 110px;
+        padding: 0 30px;
+        position: relative;
+
+        .languages_box {
+          background: rgba(255,255,255,0.8);
+          color: $dark_grey;
+          margin: 40px auto;
+          padding: 20px;
+
+          &.rtl_text {
+            direction: rtl;
+            text-align: right;
+          }
+        }
+
+        // HEADINGS
+        h1  { font-size: $heading1; }
+        h2  { font-size: $heading2; }
+        h3  { font-size: $heading3; }
+        h4  { font-size: $heading4; }
+        h5  { font-size: $heading5; }
+        p   { font-size: $normal_font_size }
+
+        @include respond-below(md) {
+          // HEADINGS
+          h1  { font-size: $heading1_s; }
+          h2  { font-size: $heading2_s; }
+          h3  { font-size: $heading3_s; }
+          h4  { font-size: $heading4_s; }
+          h5  { font-size: $heading5_s; }
+          p   { font-size: $medium_font_size }
+
+          padding-bottom: 0;
+        }
+      }
+    }
   }
 }
